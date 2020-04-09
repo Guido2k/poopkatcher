@@ -1,0 +1,243 @@
+html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: url('space.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    display: table;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+path {
+    stroke:white;
+    /* fill:#81533d; */
+    stroke-dasharray: 710px;
+    opacity: 0;
+    
+    animation: animate 20s cubic-bezier(0, 0.23,1,.1);
+    animation-delay: 9s;
+    width: 65%;
+    z-index: 200;
+}
+
+
+
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dashoffset: 710;
+    }
+    
+    30% {
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 710;
+    }
+
+    90% {
+        
+        fill: rgba(255,255, 255,0);
+        
+    }
+
+    100% {
+        opacity: 10;
+        fill: rgba(#81533d);
+        stroke-dashoffset: 0;
+    }
+
+}
+
+/* Secondary text coming soon */ 
+
+
+.fade-in {
+    top: 40%;
+    animation-delay: 11s; 
+    animation: fadeIn ease-in 12s;
+    -webkit-animation: fadeIn ease 15s;
+    -moz-animation: fadeIn ease 15s;
+    -o-animation: fadeIn ease 15s;
+    -ms-animation: fadeIn ease 15s;
+    
+    color: whitesmoke;
+    font-family: 'Cinzel', serif;
+    font-size: 35px;
+    text-shadow: 6px 4px black;
+    
+    
+
+  }
+  
+  
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    60% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0.1;
+    }
+    /* 80% {
+        opacity:0.333;
+    }
+
+    90% {
+        opacity:0.666;
+    } */
+
+
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+}
+
+.introText {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  /* top: 30%;
+  left: 25%;
+  z-index: -10; */
+  
+  animation: intro 8s;
+  animation-delay: 2s;
+  /* animation: intro 8s ease-out 3s; */
+  color: rgb(75, 213, 238);
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  font-size: 300%;
+  opacity: 0;
+  
+}
+
+.introAnimate{
+  display: block;
+
+}
+
+@keyframes intro {
+  0% {
+      opacity: 0;
+  }
+  20% {
+      opacity: 1;
+  }
+  90% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+p {
+  color: #FFFF82;
+}
+
+/* Set the font, lean the board, position it */
+#board {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  position: absolute;
+  margin-left: -9em;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 350%;
+  height: 50em;
+  width: 18em;
+  bottom: 0;
+  left: 50%;
+}
+
+#board:after {
+  position: absolute;
+  content: ' ';
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* Set the scrolling animation and position it */
+#content {
+  animation: scroll 160s linear 20s;     /* was 170 */
+  
+  position: absolute;
+  top: 100%;
+}
+
+#title, #subtitle {
+  text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+        top: 90%;
+    }
+    100% {
+        top: -222%;       /* changed from 170 */
+    }
+}

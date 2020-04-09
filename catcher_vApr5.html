@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+
+    <title>PoopKatcher2k</title>
+
+<style>
+    body{
+        background-color:  #8a5f3e;
+        overflow: hidden;
+    }
+
+    .title{
+        text-shadow: 2px 2px black;
+    }
+
+    .scoreboard {
+        text-shadow: 2px 2px black;
+        background-color: #8a5f3e;
+    }
+
+    .container{
+        position:relative;
+        height: 80vh;
+        width: 90%;
+        left: 0%;
+        background-color: #d6d6ab;
+        box-shadow: 0px 1px 8px 0px black;
+        background-image: url("./images/intro.jpg");
+        border-style: inset;
+        text-align: center;
+    }
+
+    .container_gameplay{
+        position:relative;
+        height: 80vh;
+        width: 90%;
+        left: 0%;
+        background-color: #d6d6ab;
+        box-shadow: 0px 1px 8px 0px black;
+        background-image: url("./images/whitebrick.jpg");
+        border-style: inset;
+        text-align: center;
+    }
+
+    .container_gameplay2{
+        position:relative;
+        height: 80vh;
+        width: 90%;
+        left: 0%;
+        background-color: #d6d6ab;
+        box-shadow: 0px 1px 8px 0px black;
+        background-image: url("./images/whitebrick2.jpg");
+        border-style: inset;
+        text-align: center;
+    }
+
+    .container_gameplay3{
+        position:relative;
+        height: 80vh;
+        width: 90%;
+        left: 0%;
+        background-color: #d6d6ab;
+        box-shadow: 0px 1px 8px 0px black;
+        background-image: url("./images/whitebrick3.jpg");
+        border-style: inset;
+        text-align: center;
+    }
+
+    .basket{
+        position: absolute;
+        height: 175px;
+        width: 126px;
+        bottom: 5%;
+        left: 43%;
+        
+        background-image: url("./images/toilet4.png");
+        filter: drop-shadow(10px 10px 10px grey);
+    }
+
+    .basket{
+        position: absolute;
+        height: 160px;
+        width: 116px;
+        bottom: 5%;
+        left: 43%;
+        
+        background-image: url("./images/toilet9.png");
+        filter: drop-shadow(10px 10px 10px grey);
+    }
+
+    .basket2{
+        position: absolute;
+        height: 175px;
+        width: 126px;
+        bottom: 5%;
+        left: 43%;
+        
+        background-image: url("./images/toilet4.png");
+        filter: drop-shadow(10px 10px 10px grey);
+    }
+
+    .btn{
+        /* display:inline-block;
+        margin-top: 35px;
+        border: 1px solid black;
+        background-color: brown;
+        
+        text-align: center;
+        box-shadow: 0px 1px 6px 0px black;
+        text-shadow: 1px 1px black;
+        border-radius: 50%;
+        padding: 10px 35px 15px 35px; */
+        color: white;
+        text-shadow: 2px 2px black;
+        font-family: 'Press Start 2p', cursive;
+        font-size: 2em;
+        border: 2px solid black;
+
+
+    }
+    .btn:hover{
+        color: grey;
+        background-color: #8a5f3e;
+    }
+
+
+    .btn2{
+        display:none;
+        
+        margin-top: 0px;
+        border: 1px solid black;
+        background-color: #8a5f3e;
+        color: white;
+        font-family: verdana;
+        font-size: 2em;
+        text-align: center;
+        box-shadow: 0px 1px 6px 0px black;
+        text-shadow: 1px 1px black;
+        border-radius: 50%;
+        padding: 20px 45px 20px 45px;
+        z-index: 105;
+    }
+
+    .btn2:hover{
+        cursor: pointer;
+        color:rgb(146, 67, 67);
+        background-color: grey;
+        
+    }
+
+
+
+    .topbar{
+        text-align: center;
+        padding: 5px;
+        font-family:'Press Start 2P', cursive;
+        font-size: 2em;
+
+
+    }
+
+    .branding {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color:  #8a5f3e;
+        
+    }
+
+    .blinking {
+        animation: blinkingText 1s infinite;
+       
+    }
+
+    @keyframes blinkingText{
+        0%{ color: transparent; }
+        15%{ color: rgb(152,104,69) ; }
+        30%{ color: rgb(175,120,79); }
+        45%{ color: rgb(187,139,104); }
+        60%{ color: rgb(207,173,148); }
+        75%{ color: rgb(230,213,200); }
+        92%{ color: rgb(245,245,245); }
+        100%{ color: rgb(255,255,255); }
+    }
+    
+    .blinking1 {
+        animation: blinkingText1 0.6s linear infinite;
+        text-shadow: 1px 1px yellowgreen;
+        
+    }
+   
+    @keyframes blinkingText1{
+        0%{ color: transparent; }
+        50%{ color: rgb(70, 128, 70); }
+        100%{color: rgb(61, 226, 61); }
+    }
+
+    .blinking2 {
+        animation: blinkingText2 0.6s linear infinite;
+        text-shadow: 1px 1px rgb(214, 199, 64);
+    }
+
+    @keyframes blinkingText2{
+        0%{ color: transparent; }
+        50%{ color: rgb(128, 128, 69); }
+        100%{ color: rgb(255, 255, 17); }
+    }
+
+    .blinking3 {
+        animation: blinkingText3 0.6s linear infinite;
+        text-shadow: 1px 1px rgb(146, 67, 67);
+    }
+
+     @keyframes blinkingText3{
+        0%{ color: transparent; }
+        50%{ color: rgb(165, 76, 76); }
+        100%{color: rgb(248, 0, 0); }
+    }
+
+
+
+
+    .poison{
+        position: absolute;
+        height: 52px;
+        width: 100px;
+        top: 0;
+        left: 0;
+        background-image: url("./images/shoe.png");
+        filter: drop-shadow(10px 10px 10px grey);
+        
+
+    }
+
+    
+    
+
+    .rat{
+        position: absolute;
+        height: 129px;
+        width: 95px;
+        top: 0;
+        left: 0;
+        background-image: url("./images/rat4.png");
+        filter: drop-shadow(10px 10px 10px grey);
+        
+    }
+
+    .uwear{
+        position: absolute;
+        height: 68px;
+        width: 97px;
+        top: 0;
+        left: 0;
+        background-image: url("./images/uwear4.png");
+        filter: drop-shadow(10px 10px 10px grey);
+        animation: rotation2 3s infinite ease-in-out;
+    }
+    
+    @keyframes rotation {
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(359deg);
+        }
+    }
+
+    @keyframes rotation2 {
+        from{
+            transform: rotate(359deg);
+        }
+        to{
+            transform: rotate(0deg);
+        }
+    }
+
+    .fish{
+        position: absolute;
+        height: 54px;
+        width: 220px;
+        top: 0;
+        left: 0;
+        background-image: url("./images/fish2.png");
+        filter: drop-shadow(10px 10px 10px grey);
+        animation: rotation 7s infinite ease-out;
+    }
+
+   .garb{
+        position: absolute;
+        height: 133px;
+        width: 121px;
+        top: 0;
+        left: 0;
+        background-image: url("./images/garb2.png");
+        filter: drop-shadow(10px 10px 10px grey);
+    }
+
+    .baddy{
+        position: absolute;
+        height: 117px;
+        width: 100px;
+        top: 0;
+        left: 0;
+        background-image: url("./images/poop.png");
+        filter: drop-shadow(10px 10px 10px grey);
+        
+    }
+
+    .message_ovr{
+        text-align: center;
+        padding: 5px;
+        font-family:'Press Start 2P', cursive;
+        font-size: 5em;
+        color: black;
+        text-shadow: 5px 5px grey;
+        z-index: 1000000;
+    }
+
+    .message2{                                       /* score msg at end */   
+        text-align: center;
+        padding: 5px;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 4em;
+        letter-spacing: 2px;
+        font-weight: 900;
+        padding-bottom: 30px;
+        color: #800000;
+        text-shadow: 3px 3px grey;
+        z-index: 1;
+        
+    }
+
+    .message3{                                       /*TOP HYPE BAR*/ 
+        text-align: center;
+        padding-left: 0px;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 2.5em;
+        color: white;
+        text-shadow: 3px 3px grey;
+        letter-spacing: 3px;
+    }
+
+    .message4{
+        text-align: center;
+        padding-top: 35px;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 5em;
+        color: #800000;
+        text-shadow: 3px 3px grey;
+        letter-spacing: 3px;
+    }
+
+    .diff{
+        
+        padding-top: 5px;
+        font-size: 1.4em;
+        font-family: 'Press Start 2P', cursive;
+        
+    }
+    .diff:hover{
+        text-decoration: none;
+    }
+
+    #trailer {
+        padding-top: 5px;
+        
+        
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.4em;
+        color: white;
+        }
+    #trailer:hover {
+        text-decoration: none;
+        color: #c0c0c0;
+    }    
+
+     .ghost1{
+        opacity: 0.76;
+        z-index: 12;
+    } 
+
+    .badghost{
+        opacity: 0.3;
+        z-index: -10;
+    }
+
+    /* .instruct{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 900;
+        font-size: 2em;
+        color: brown;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 60px;
+        text-shadow: 2px 2px grey;
+
+
+
+    } */
+
+    /* .instructions{
+        background-image: url("./images/instructions.png");
+        left: 0;
+        margin-left: -60px;
+        margin-top: -200px;
+        bottom: 20%;
+        height: 100%;
+        width: 100%;
+        
+    } */
+
+    .difficulty{
+        margin-top: 0px;
+    }
+
+    .score{
+        color: rgb(61, 226, 61);
+    }
+
+    .scoredn{
+        color: red;
+    }
+    
+    @keyframes pulse {
+	0% {
+		transform: scale(0.85);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.85);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+
+
+
+
+/* TOOOOOOLTIPPPP STUFF ******************/
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.message5{
+    display: none;
+}
+
+.btn3{
+    font-size: 1.2em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.rating{
+    font-size: 2em;
+    color: red;
+    transform: scale(1);
+    animation: pulse 1.5s infinite;
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <audio src="impact1.wav" preload></audio>
+
+
+    <div class="branding">
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-item diff blinking " href="#">Player1</a>
+            <a><span class="nav-item message3 blinking">PooPKatcher2k</span></a>
+            <a id = "trailer" class="nav-item" href = "./svgintro/index.html">VIEW TRAILER</a>
+        </nav> 
+        
+      </div>
+    
+
+    <div class="topbar">
+        <div class="container2">
+                <div class = "scoreboard text-light">
+                    
+                    Score: <span class="score">0</span>
+                    PooP: <span class="badLeft">0</span>
+                    Time: <label id="minutes">00</label>:<label id="seconds">00</label>
+                   
+                </div>
+        </div>
+    </div>
+
+    <div class="container bg-light">
+        
+        
+
+        <form id="form1">
+
+
+
+        </form>
+
+
+        <div class="message_ovr"></div>
+        <div class="message2"></div>
+        <!--<div class="btn">Start</div> -->
+        <div class="btn2">Try Again?</div>
+        <div class="message4"></div> 
+                      <!-- rank -->
+        <div class="message5">
+
+<button type="button" class="btn3 btn-secondary rate1">STANK</button>
+<button type="button" class="btn3 btn-secondary rate2">NEWB</button>
+<button type="button" class="btn3 btn-secondary rate3">PROSPECT</button>
+<button type="button" class="btn3 btn-secondary rate4">VETERAN</button>
+<button type="button" class="btn3 btn-secondary rate5">NINJA</button>
+
+        </div>   
+        
+        
+
+
+
+
+
+        
+        <div class="instruct"></div>                   
+        <div class="basket"></div>
+        
+        <div class="difficulty">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="Easy" autocomplete="off" onclick="startGame1(); clock()">NEWB
+               
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="Normal" autocomplete="off" onclick="startGame2(); clock()">NORMAL
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="Hard" autocomplete="off" onclick="startGame3(); clock()">NINJA
+            </label>
+            </div>
+             
+        </div>    
+        
+        
+    </div>
+    
+    <script>
+        const myAudio = document.createElement("audio");
+        myAudio.src = "./sounds/impact1.wav";
+        const myAudio2 = document.createElement("audio");
+        myAudio2.src = "./sounds/goodhit.wav";
+        const myAudio3 = document.createElement("audio");
+        myAudio3.src = "./sounds/bgsound.wav";
+        
+        const rate1 = document.querySelector(".rate1");
+        const rate2 = document.querySelector(".rate2");
+        const rate3 = document.querySelector(".rate3");
+        const rate4 = document.querySelector(".rate4");
+        const rate5 = document.querySelector(".rate5");
+        const instructions = document.querySelector(".instructions")
+        const instruct = document.querySelector(".instruct");
+        const diff = document.querySelector(".diff");
+        const message_ovr = document.querySelector(".message_ovr");
+        const message2 = document.querySelector(".message2");
+        const message3 = document.querySelector(".message3");
+        const message4 = document.querySelector(".message4");
+        const message5 = document.querySelector(".message5");
+        const scoreOutput = document.querySelector(".score");
+        const badLeft = document.querySelector(".badLeft");
+        const btn = document.querySelector(".btn");
+        const btn2 = document.querySelector(".btn2");
+        const hypeMsg = document.querySelector(".hypeMsg");
+        const basket = document.querySelector(".basket");
+        const container = document.querySelector(".container");
+        const baddy = document.querySelector(".baddy");
+        const poison = document.querySelector(".poison");
+        const difficulty = document.querySelector(".difficulty");
+        let boundBasket = basket.getBoundingClientRect();
+        let boundContainer = container.getBoundingClientRect();
+        
+
+        let keys = {
+            ArrowUp: false,
+            ArrowDown: false,
+            ArrowLeft: false,
+            ArrowRight: false,
+        }
+
+        let player = {
+            score: 0,
+            totalBad: 0,
+            totalPoison: 0,                    
+            inPlay: false,
+            speed: 10,
+            
+        }
+        
+        
+        //btn.addEventListener("click", startGame);
+        //btn.addEventListener("click", clock);
+        btn2.addEventListener("click", function(){location.reload()});
+
+        document.addEventListener("keydown", pressKeyOn);
+        document.addEventListener("keyup", pressKeyOff);
+        
+// *****START GAME (EASY ) *************/
+
+        function startGame1(){
+            
+            myAudio3.play();
+            message_ovr.style.display = "none";
+            difficulty.style.display = "none";
+            instruct.style.display ="none";
+            message4.style.display = "none";
+            message5.style.display ="none";
+            diff.textContent = "Player1: *NEWB*";
+            diff.classList.add("blinking1");
+            btn.style.display = "none";
+            btn2.style.display = "none";
+            basket.style.display = "block";
+            container.classList.add("container_gameplay");
+            player.score = 0;
+            player.totalBad = 75;
+            player.totalPoison = 50;   
+            player.speed = 13;                    
+            player.inPlay = true;
+            scoreUpdate();
+
+          
+            
+        // setup badguys (ratio - spawned at a time) //
+
+            setupBadGuys(5);
+            setupPoison(3);                              
+            requestAnimationFrame(playGame);   
+
+        }        
+            
+/// *****END START GAME (EASY) *************/ 
+
+// *****START GAME (NORMAL ) *************/
+
+function startGame2(){
+            
+            myAudio3.play();
+            message_ovr.style.display = "none";
+            difficulty.style.display = "none";
+            message4.style.disply = "none";
+            diff.textContent = "Player1: *NORMAL*";
+            diff.classList.add("blinking2");
+            btn.style.display = "none";
+            btn2.style.display = "none";
+            basket.style.display = "block";
+            instruct.style.display = "none";
+            container.classList.add("container_gameplay2");
+            player.score = 0;
+            player.totalBad = 75;
+            player.totalPoison = 50;                       
+            player.inPlay = true;
+            player.speed = 12;
+            scoreUpdate();
+
+          
+            
+        // setup badguys (ratio - spawned at a time) //
+
+            setupBadGuys(6);
+            setupPoison(4);                              
+            requestAnimationFrame(playGame);   
+
+        }        
+            
+/// *****END START GAME (NORMAL) *************/
+
+// *****START GAME (HARD) *************/
+
+function startGame3(){
+            
+            myAudio3.play();
+            message_ovr.style.display = "none";
+            difficulty.style.display = "none";
+            message4.style.disply = "none";
+            diff.textContent = "*Player1: *NINJA*";
+            diff.classList.add("blinking3");
+            btn.style.display = "none";
+            btn2.style.display = "none";
+            instruct.style.display = "none";
+            basket.style.display = "block";
+            basket.classList.add("basket2");
+            container.classList.add("container_gameplay3");
+            player.score = 0;
+            player.totalBad = 75;
+            player.totalPoison = 50;  
+            player.speed = 10;                     
+            player.inPlay = true;
+            scoreUpdate();
+
+          
+            
+        // setup badguys (ratio - spawned at a time) //
+
+            setupBadGuys(6);
+            setupPoison(5);                              
+            requestAnimationFrame(playGame);   
+
+        }        
+            
+/// *****END START GAME (HARD) *************/
+
+
+
+        function setupPoison(amt){                          
+            for(let x=0; x<amt; x++){                       
+                makePoison();                               
+            }                                               
+       }                                                    
+
+        function setupBadGuys(num){
+            for(let x=0; x<num; x++){
+                makeBad();
+            }
+       }
+
+       function makePoison(){                               
+            if(player.totalPoison > 0){
+                let temp = player.totalPoison;               
+                player.totalPoison--;
+                
+                let poison = document.createElement("div");   
+                 
+                poison.classList.add("poison");     
+                
+                if(player.score%2 == 0){
+               
+                        poison.classList.add("rat");
+                        }
+                    else if (player.score%3 == 0){
+                        
+                        poison.classList.add("fish");
+                    
+                    }
+
+                    else if (player.score%5 == 0){
+                       
+                        poison.classList.add("uwear");
+                    
+                    }
+
+                    else if (player.score%7 == 0){
+                        poison.classList.add("poison");
+                    }
+
+                    else 
+                        poison.classList.add("garb");
+
+        // ***** HYPE (PERFORMANCE/TAUNT) TEXTBAR ***********/             
+
+
+                    var hype1 = "Weak, Just Give UP!"
+                    var hype2 = "* You Suck Newb! *"
+                    var hype3 = "Mediocre Effort Brah!"
+                    var hype4 = "* Call the VET! *"
+                    var hype5 = "!Push it to the Max!"
+                    
+                    
+                    if(player.score <= 10) {
+                        message3.textContent = hype1;
+
+                    } else if( player.score > 10 && player.score < 30){
+                        message3.textContent = hype2;
+                    }else if (player.score >= 30 && player.score < 55){
+                        (message3.textContent = hype3);
+                    }else if(player.score >= 55 && player.score < 85){
+                        (message3.textContent = hype4);
+                    }else if(player.score >= 85){
+                        (message3.textContent = hype5);
+                    }
+
+                    //** SCORE COLOR (RED/GREEN SNIPPET) ***//
+
+                    if(player.score < 0){
+                        scoreOutput.classList.add("scoredn")
+                    } else if (player.score >= 0){
+                        scoreOutput.classList.remove("scoredn")
+                        scoreOutput.classList.add("score") 
+                    }
+
+
+          //***********END HYPE BAR ******************/          
+
+                    
+                poison.x = Math.floor(Math.random() * boundContainer.width - 100); 
+                if(poison.x < 0){ 
+                    poison.x = 100};
+                poison.y = (Math.floor(Math.random() * 500)*-1) - 200;
+                poison.speed = Math.ceil(Math.random() * 10) +3;
+                                    
+                container.appendChild(poison);
+                poison.style.left = poison.x + "px";
+                poison.style.top = poison.y + "px";
+        
+            }
+       }        
+
+        function makeBad(){
+            if(player.totalBad > 0){
+                let temp = player.totalBad;
+                player.totalBad--;
+                
+                scoreUpdate();
+                let div = document.createElement("div");
+                
+                div.classList.add("baddy");
+                div.x = Math.floor(Math.random() * boundContainer.width - 100);
+
+                if(div.x < 0){ 
+                    div.x = 100};
+                div.y = (Math.floor(Math.random() * 500)*-1) - 200;
+                div.speed = Math.ceil(Math.random() * 10) +3;
+                container.appendChild(div);
+                div.style.left = div.x + "px";
+                div.style.top = div.y + "px";
+
+            }
+        }
+
+        function playGame(){
+            if(player.inPlay == true){
+                
+                if(keys.ArrowDown && boundBasket.y < (boundContainer.height - boundBasket.height)){
+                    boundBasket.y += player.speed;
+                }
+                if(keys.ArrowUp && boundBasket.y > 333){     /// player upper limit
+                    boundBasket.y -= player.speed;
+                }
+                if(keys.ArrowLeft && boundBasket.x > 0){
+                    boundBasket.x -= player.speed;
+                }
+                if(keys.ArrowRight && boundBasket.x < (boundContainer.width - boundBasket.width)){
+                    boundBasket.x += player.speed;
+                }
+
+                basket.style.left = boundBasket.x + "px";
+                basket.style.top = boundBasket.y + "px";
+
+                requestAnimationFrame(playGame);
+
+                let tempPoison = document.querySelectorAll(".poison");
+                      
+                let tempEnemy = document.querySelectorAll(".baddy");
+                if(tempEnemy.length == 0 | player.score <= -20){
+                    
+
+                    
+
+                    endGame();
+                   
+                }else{
+
+                    for(let i=0; i< tempEnemy.length; i++){
+                        bgMover(tempEnemy[i]);
+                    }
+
+                    for(let i=0; i<tempPoison.length; i++){
+                        poisonMover(tempPoison[i]);
+                                       
+                    } 
+                               
+                }
+            }
+        }    
+
+        function endGame(){
+            container.classList.add("ghost1");
+            
+            message_ovr.style.display = "block";
+            basket.style.display = "none";
+            
+            message_ovr.textContent = "Game Over!"
+            player.totalBad = 0;
+            
+            message2.textContent = "Your score is " + scoreOutput.innerHTML + " in " + minutesLabel.innerHTML + ":" + secondsLabel.innerHTML ;
+            btn2.style.display = "inline";  
+
+            
+            
+            let rank = " ";
+            if(player.score < 10){
+                rank = "stank";
+            } else if (player.score >= 10 && player.score < 30){
+                rank = "newb";
+            } else if (player.score >= 30 && player.score < 55){
+                rank = "prospect"; 
+            } else if (player.score >= 55 && player.score < 85){
+                rank = "veteran";
+            } else if (player.score >=85){
+                rank = "ninja";
+            }      
+
+
+
+            message4.style.display ="block";
+            message4.textContent = "Your rank is: " + rank;
+            message5.style.display = "block";
+            
+            if (rank == "stank") {
+                rate1.classList.add("rating")
+            }else if(rank == "newb") {
+                rate2.classList.add("rating");
+            }else if(rank == "prospect"){
+                rate3.classList.add("rating");
+            }else if(rank == "veteran"){
+                rate4.classList.add("rating");
+            }else if(rank == "ninja"){
+                rate5.classList.add("rating");
+            }
+                       
+            player.inPlay == false;
+            
+        }
+
+        function bgMover(e){
+            e.y += e.speed;
+            if(e.y > boundContainer.height - 100){           /////chg apr6
+                e.y = -100;
+            
+            
+            e.x = Math.floor(Math.random()* boundContainer.width - 100);
+                if(e.x <0)                                ///////
+                     e.x = 100;
+                
+                
+                e.style.left = e.x + "px";
+            
+            }    
+
+
+            if(isCollide(basket,e)){
+                player.score = player.score + 1;
+                container.removeChild(e);
+                scoreUpdate();
+                makeBad();
+                console.log("hit");
+                
+                myAudio2.play();
+
+                              
+            }
+            e.style.top = e.y + "px";
+        }    
+
+        function poisonMover(p){
+            p.y += p.speed;
+            if(p.y > boundContainer.height - 100){     /// chgd from -160
+                p.y = -100;
+
+                p.x = Math.floor(Math.random()* boundContainer.width - 100);
+                if(p.x <0){
+                    p.x = 100;
+                }
+                p.style.left = p.x + "px";
+            }
+
+            if(isCollide(basket,p)){
+                player.score = player.score - 2;
+                container.removeChild(p);
+                scoreUpdate();
+                makePoison();
+                console.log("POISON!!!!!");
+                myAudio.play();
+                
+                    
+                
+            }
+            p.style.top = p.y + "px";
+        }    
+
+        function isCollide(a, b){
+            let aRect = a.getBoundingClientRect();
+            let bRect = b.getBoundingClientRect();
+            return !(
+                (aRect.bottom < bRect.top) ||
+                (aRect.top > bRect.bottom) ||
+                (aRect.right < bRect.left) ||
+                (aRect.left > bRect.right)
+            )
+        }    
+
+
+        // launch animation
+       
+        function scoreUpdate(){
+            scoreOutput.textContent = player.score;
+            badLeft.textContent = player.totalBad;
+        }
+        
+
+        // KEY PRESS EVENTS SETUP
+
+        function pressKeyOn(event) {
+            console.log(event.key);
+            event.preventDefault();
+            keys[event.key] = true;
+        }
+
+        function pressKeyOff(event) {
+            console.log(event.key);
+            event.preventDefault();
+            keys[event.key] = false;
+        }
+
+        // TIMER
+
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+
+
+
+function clock(){
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        var timeout = setInterval(setTime, 1000);
+
+         
+
+        function setTime() {
+            //var minutesLabel = document.getElementById("minutes");
+            //var secondsLabel = document.getElementById("seconds");
+            //var totalSeconds = 0;
+            //var timeout = setInterval(setTime, 1000);
+        ++totalSeconds;
+
+        if(totalSeconds%40 == 0){
+            myAudio3.play();
+        }  
+
+        secondsLabel.innerHTML = pad(totalSeconds % 60);
+        minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+        
+        let tempEnemy = document.querySelectorAll(".baddy");
+        if(tempEnemy.length == 0 | player.score <= -20){          
+            clearInterval(timeout);
+         
+        }
+        
+        }
+        function resetTime(){
+            totalSeconds = 0;
+            setTime();
+        }
+        
+        
+        function pad(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+            return "0" + valString;
+            } else {
+            return valString;
+            }
+        }
+}
+        /// end timer
+
+    </script>
+
+</body>
+</html>
