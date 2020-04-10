@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- GOOGLE FONTS-->
+    
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
     integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
 
+    <!-- STYLESHEET -->
+	<link rel="stylesheet" type="text/css" href="main.css"> 
 
     <title>PoopKatcher2k</title>
 
@@ -75,6 +83,19 @@
         border-style: inset;
         text-align: center;
     }
+ 
+    .container_endgame{
+        position:relative;
+        height: 80vh;
+        width: 90%;
+        left: 0%;
+        background-color: #d6d6ab;
+        box-shadow: 0px 1px 8px 0px black;
+        background-image: url("./images/whitebrick1.jpg");
+        border-style: inset;
+        text-align: center;
+    }
+
 
     .basket{
         position: absolute;
@@ -93,7 +114,6 @@
         width: 116px;
         bottom: 5%;
         left: 43%;
-        
         background-image: url("./images/toilet9.png");
         filter: drop-shadow(10px 10px 10px grey);
     }
@@ -110,27 +130,20 @@
     }
 
     .btn{
-        /* display:inline-block;
-        margin-top: 35px;
-        border: 1px solid black;
-        background-color: brown;
-        
-        text-align: center;
-        box-shadow: 0px 1px 6px 0px black;
-        text-shadow: 1px 1px black;
-        border-radius: 50%;
-        padding: 10px 35px 15px 35px; */
-        color: white;
+        color: #8a5f3e;
         text-shadow: 2px 2px black;
         font-family: 'Press Start 2p', cursive;
         font-size: 2em;
         border: 2px solid black;
 
-
     }
+    
     .btn:hover{
-        color: grey;
+        color: white;
         background-color: #8a5f3e;
+        text-shadow: 2px 2px red;
+        font-size: 2em;
+        
     }
 
 
@@ -165,7 +178,6 @@
         padding: 5px;
         font-family:'Press Start 2P', cursive;
         font-size: 2em;
-
 
     }
 
@@ -506,7 +518,7 @@
         <nav class="nav nav-pills nav-justified">
             <a class="nav-item diff blinking " href="#">Player1</a>
             <a><span class="nav-item message3 blinking">PooPKatcher2k</span></a>
-            <a id = "trailer" class="nav-item" href = "./svgintro/index.html">VIEW TRAILER</a>
+            <a id = "trailer" class="nav-item" href = "index.html">VIEW TRAILER</a>
         </nav> 
         
       </div>
@@ -538,31 +550,26 @@
         <div class="message5">
 
 <button type="button" class="btn3 btn-secondary rate1">STANK</button>
-<button type="button" class="btn3 btn-secondary rate2">NEWB</button>
-<button type="button" class="btn3 btn-secondary rate3">PROSPECT</button>
+<button type="button" class="btn3 btn-secondary rate2">PROSPECT</button>
+<button type="button" class="btn3 btn-secondary rate3">PRIVATE</button>
 <button type="button" class="btn3 btn-secondary rate4">VETERAN</button>
 <button type="button" class="btn3 btn-secondary rate5">NINJA</button>
 
         </div>   
         
-        
-
-
-
-
-
-        
+           
         <div class="instruct"></div>                   
         <div class="basket"></div>
         
         <div class="difficulty">
-            <div class ="output"></div>
+        <div class ="output"></div>
 
 
 
 
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary" title="Even Nolin plays at least normal level!.. But hey, if you're a newb you're a newb right?">
+            <label class="btn btn-secondary" title="Even Nolin plays at least normal level!.......
+But hey, if you're a newb you're a newb right?">
               <input type="radio" name="options" id="Easy" autocomplete="off" onclick="startGame1(); clock()">NEWB
                
             </label>
@@ -1066,7 +1073,7 @@ function startGame3(){
 
         function endGame(){
             container.classList.add("ghost1");
-            
+            container.classList.add("container_endgame");               ////////////////////////
             message_ovr.style.display = "block";
             basket.style.display = "none";
             
@@ -1082,9 +1089,9 @@ function startGame3(){
             if(player.score < 10){
                 rank = "stank";
             } else if (player.score >= 10 && player.score < 30){
-                rank = "newb";
+                rank = "prospect";
             } else if (player.score >= 30 && player.score < 55){
-                rank = "prospect"; 
+                rank = "private"; 
             } else if (player.score >= 55 && player.score < 85){
                 rank = "veteran";
             } else if (player.score >=85){
@@ -1099,9 +1106,9 @@ function startGame3(){
             
             if (rank == "stank") {
                 rate1.classList.add("rating")
-            }else if(rank == "newb") {
+            }else if(rank == "prospect") {
                 rate2.classList.add("rating");
-            }else if(rank == "prospect"){
+            }else if(rank == "private"){
                 rate3.classList.add("rating");
             }else if(rank == "veteran"){
                 rate4.classList.add("rating");

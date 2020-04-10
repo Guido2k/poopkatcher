@@ -23,6 +23,59 @@ body {
    
 }
 
+.btn1 {
+  position: absolute;
+  font-size: 1em;
+   top: 5%;
+   left: 85%;
+   padding: 4px;
+   font-family: 'Press Start 2P', cursive;
+   color: white;
+   background-color: grey;
+   text-shadow: 2px 2px black;
+}
+
+.btn2 {
+  position: absolute;
+  font-size: 1em;
+   top: 10%;
+   left: 85%;
+   padding: 4px;
+   font-family: 'Press Start 2P', cursive;
+   color: white;
+   background-color: grey;
+   text-shadow: 2px 2px black;
+}
+
+.btn3 {
+  position: absolute;
+  font-size: 1em;
+   top: 17%;
+   left: 85%;
+   padding: 4px;
+   font-family: 'Press Start 2P', cursive;
+   color: white;
+   background-color: grey;
+   text-shadow: 2px 2px black;
+}
+
+.btn1:hover, .btn2:hover, .btn3:hover{
+  
+    color: white;
+    background-color: #8a5f3e;
+    text-shadow: 1px 1px red;
+    font-size: 1em;
+    
+    
+        /*padding: 3px 3px 3px 3px; */
+        
+    }
+
+
+
+
+
+
 path {
     stroke:white;
     /* fill:#81533d; */
@@ -30,7 +83,7 @@ path {
     opacity: 0;
     
     animation: animate 20s cubic-bezier(0, 0.23,1,.1);
-    animation-delay: 9s;
+    animation-delay: 8s;
     width: 65%;
     z-index: 200;
 }
@@ -72,10 +125,10 @@ path {
     top: 40%;
     animation-delay: 11s; 
     animation: fadeIn ease-in 12s;
-    -webkit-animation: fadeIn ease 15s;
-    -moz-animation: fadeIn ease 15s;
-    -o-animation: fadeIn ease 15s;
-    -ms-animation: fadeIn ease 15s;
+    -webkit-animation: fadeIn ease 12s;
+    -moz-animation: fadeIn ease 12s;
+    -o-animation: fadeIn ease 12s;
+    -ms-animation: fadeIn ease 12s;
     
     color: whitesmoke;
     font-family: 'Cinzel', serif;
@@ -161,7 +214,7 @@ path {
   z-index: -10; */
   
   animation: intro 8s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   /* animation: intro 8s ease-out 3s; */
   color: rgb(75, 213, 238);
   font-family: 'Heebo', sans-serif;
@@ -223,7 +276,7 @@ p {
 
 /* Set the scrolling animation and position it */
 #content {
-  animation: scroll 160s linear 20s;     /* was 170 */
+  animation: scroll 160s linear 23s;     /* was 170 */
   
   position: absolute;
   top: 100%;

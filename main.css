@@ -1,0 +1,518 @@
+body{
+    background-color:  #8a5f3e;
+    overflow: hidden;
+}
+
+.title{
+    text-shadow: 2px 2px black;
+}
+
+.scoreboard {
+    text-shadow: 2px 2px black;
+    background-color: #8a5f3e;
+}
+
+.container{
+    position:relative;
+    height: 80vh;
+    width: 90%;
+    left: 0%;
+    background-color: #d6d6ab;
+    box-shadow: 0px 1px 8px 0px black;
+    background-image: url("./images/intro.jpg");
+    border-style: inset;
+    text-align: center;
+}
+
+.container_gameplay{
+    position:relative;
+    height: 80vh;
+    width: 90%;
+    left: 0%;
+    background-color: #d6d6ab;
+    box-shadow: 0px 1px 8px 0px black;
+    background-image: url("./images/whitebrick.jpg");
+    border-style: inset;
+    text-align: center;
+}
+
+.container_gameplay2{
+    position:relative;
+    height: 80vh;
+    width: 90%;
+    left: 0%;
+    background-color: #d6d6ab;
+    box-shadow: 0px 1px 8px 0px black;
+    background-image: url("./images/whitebrick2.jpg");
+    border-style: inset;
+    text-align: center;
+}
+
+.container_gameplay3{
+    position:relative;
+    height: 80vh;
+    width: 90%;
+    left: 0%;
+    background-color: #d6d6ab;
+    box-shadow: 0px 1px 8px 0px black;
+    background-image: url("./images/whitebrick3.jpg");
+    border-style: inset;
+    text-align: center;
+}
+
+.container_endgame{
+    position:relative;
+    height: 80vh;
+    width: 90%;
+    left: 0%;
+    background-color: #d6d6ab;
+    box-shadow: 0px 1px 8px 0px black;
+    background-image: url("./images/whitebrick1.jpg");
+    border-style: inset;
+    text-align: center;
+}
+
+/* .container_hype1, #img1{
+    position:relative;  
+    height: 80vh;
+    width: 85%;
+    margin:auto;
+    background-color: #d6d6ab;
+    box-shadow: 0px 1px 8px 0px black;
+    background-image: url("./images/hype4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-style: inset;
+    text-align: center;
+ 
+}
+
+.container_hype2, #img2{
+    position:relative;  
+    height: 80vh;
+    width: 85%;
+    margin:auto;
+    background-color: #d6d6ab;
+    box-shadow: 0px 1px 8px 0px black;
+    background-image: url("./images/hype2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-style: inset;
+    text-align: center;
+ 
+} */
+
+
+
+
+.basket{
+    position: absolute;
+    height: 175px;
+    width: 126px;
+    bottom: 5%;
+    left: 43%;
+    
+    background-image: url("./images/toilet4.png");
+    filter: drop-shadow(10px 10px 10px grey);
+}
+
+.basket{
+    position: absolute;
+    height: 160px;
+    width: 116px;
+    bottom: 5%;
+    left: 43%;
+    background-image: url("./images/toilet9.png");
+    filter: drop-shadow(10px 10px 10px grey);
+}
+
+.basket2{
+    position: absolute;
+    height: 175px;
+    width: 126px;
+    bottom: 5%;
+    left: 43%;
+    
+    background-image: url("./images/toilet4.png");
+    filter: drop-shadow(10px 10px 10px grey);
+}
+
+.btn{
+    color: #8a5f3e;
+    text-shadow: 2px 2px black;
+    font-family: 'Press Start 2p', cursive;
+    font-size: 2em;
+    border: 2px solid black;
+
+}
+
+.btn:hover{
+    color: white;
+    background-color: #8a5f3e;
+    text-shadow: 2px 2px red;
+    font-size: 2em;
+    
+}
+
+
+.btn2{
+    display:none;
+    
+    margin-top: 0px;
+    border: 1px solid black;
+    background-color: #8a5f3e;
+    color: white;
+    font-family: verdana;
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 0px 1px 6px 0px black;
+    text-shadow: 1px 1px black;
+    border-radius: 50%;
+    padding: 20px 45px 20px 45px;
+    z-index: 105;
+}
+
+.btn2:hover{
+    cursor: pointer;
+    color:rgb(146, 67, 67);
+    background-color: grey;
+    
+}
+
+
+
+.topbar{
+    text-align: center;
+    padding: 5px;
+    font-family:'Press Start 2P', cursive;
+    font-size: 2em;
+
+}
+
+.branding {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:  #8a5f3e;
+    
+}
+
+.blinking {
+    animation: blinkingText 1s infinite;
+   
+}
+
+@keyframes blinkingText{
+    0%{ color: transparent; }
+    15%{ color: rgb(152,104,69) ; }
+    30%{ color: rgb(175,120,79); }
+    45%{ color: rgb(187,139,104); }
+    60%{ color: rgb(207,173,148); }
+    75%{ color: rgb(230,213,200); }
+    92%{ color: rgb(245,245,245); }
+    100%{ color: rgb(255,255,255); }
+}
+
+.blinking1 {
+    animation: blinkingText1 0.6s linear infinite;
+    text-shadow: 1px 1px yellowgreen;
+    
+}
+
+@keyframes blinkingText1{
+    0%{ color: transparent; }
+    50%{ color: rgb(70, 128, 70); }
+    100%{color: rgb(61, 226, 61); }
+}
+
+.blinking2 {
+    animation: blinkingText2 0.6s linear infinite;
+    text-shadow: 1px 1px rgb(214, 199, 64);
+}
+
+@keyframes blinkingText2{
+    0%{ color: transparent; }
+    50%{ color: rgb(128, 128, 69); }
+    100%{ color: rgb(255, 255, 17); }
+}
+
+.blinking3 {
+    animation: blinkingText3 0.6s linear infinite;
+    text-shadow: 1px 1px rgb(146, 67, 67);
+}
+
+ @keyframes blinkingText3{
+    0%{ color: transparent; }
+    50%{ color: rgb(165, 76, 76); }
+    100%{color: rgb(248, 0, 0); }
+}
+
+
+
+
+.poison{
+    position: absolute;
+    height: 52px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    background-image: url("./images/shoe.png");
+    filter: drop-shadow(10px 10px 10px grey);
+    
+
+}
+
+
+
+
+.rat{
+    position: absolute;
+    height: 129px;
+    width: 95px;
+    top: 0;
+    left: 0;
+    background-image: url("./images/rat4.png");
+    filter: drop-shadow(10px 10px 10px grey);
+    
+}
+
+.uwear{
+    position: absolute;
+    height: 68px;
+    width: 97px;
+    top: 0;
+    left: 0;
+    background-image: url("./images/uwear4.png");
+    filter: drop-shadow(10px 10px 10px grey);
+    animation: rotation2 3s infinite ease-in-out;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation2 {
+    from{
+        transform: rotate(359deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+.fish{
+    position: absolute;
+    height: 54px;
+    width: 220px;
+    top: 0;
+    left: 0;
+    background-image: url("./images/fish2.png");
+    filter: drop-shadow(10px 10px 10px grey);
+    animation: rotation 7s infinite ease-out;
+}
+
+.garb{
+    position: absolute;
+    height: 133px;
+    width: 121px;
+    top: 0;
+    left: 0;
+    background-image: url("./images/garb2.png");
+    filter: drop-shadow(10px 10px 10px grey);
+}
+
+.baddy{
+    position: absolute;
+    height: 117px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    background-image: url("./images/poop.png");
+    filter: drop-shadow(10px 10px 10px grey);
+    
+}
+
+.message_ovr{
+    text-align: center;
+    padding: 5px;
+    font-family:'Press Start 2P', cursive;
+    font-size: 5em;
+    color: black;
+    text-shadow: 5px 5px grey;
+    z-index: 1000000;
+}
+
+.message2{                                       /* score msg at end */   
+    text-align: center;
+    padding: 5px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4em;
+    letter-spacing: 2px;
+    font-weight: 900;
+    padding-bottom: 30px;
+    color: #800000;
+    text-shadow: 3px 3px grey;
+    z-index: 1;
+    
+}
+
+.message3{                                       /*TOP HYPE BAR*/ 
+    text-align: center;
+    padding-left: 0px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 3px 3px grey;
+    letter-spacing: 3px;
+}
+
+.message4{
+    text-align: center;
+    padding-top: 35px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 5em;
+    color: #800000;
+    text-shadow: 3px 3px grey;
+    letter-spacing: 3px;
+}
+
+.diff{
+    
+    padding-top: 5px;
+    font-size: 1.4em;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+.diff:hover{
+    text-decoration: none;
+}
+
+#trailer {
+    padding-top: 5px;
+    
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4em;
+    color: white;
+    }
+#trailer:hover {
+    text-decoration: none;
+    color: #c0c0c0;
+}    
+
+.nav-item{
+    text-decoration: none;
+}
+
+ .ghost1{
+    opacity: 0.76;
+    z-index: 12;
+} 
+
+.badghost{
+    opacity: 0.3;
+    z-index: -10;
+}
+
+
+
+.difficulty{
+    margin-top: 0px;
+}
+
+.score{
+    color: rgb(61, 226, 61);
+}
+
+.scoredn{
+    color: red;
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(0.85);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+}
+
+70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+}
+
+100% {
+    transform: scale(0.85);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+}
+
+
+.message5{
+display: none;
+}
+
+.btn3{
+font-size: 1.2em;
+font-family: 'Press Start 2P', cursive;
+}
+
+.rating{
+font-size: 2em;
+color: red;
+transform: scale(1);
+animation: pulse 1.5s infinite;
+}
+
+.bat{
+position: absolute;
+height: 65px;
+width: 200px;
+background-image: url('./images/bat2.png');
+filter: drop-shadow(10px 10px 10px grey);
+}
+
+.bat2{
+position: absolute;
+height: 83px;
+width: 90px;
+background-image: url('./images/bee1.png');
+filter: drop-shadow(10px 10px 10px grey);
+}
+
+.bat3{
+position: absolute;
+height: 117px;
+width: 185px;
+background-image: url('./images/ufoEthan2.png');
+filter: drop-shadow(13px 13px 13px rgb(44, 219, 44));
+opacity: 0.9;
+
+
+}
+
+/* ----------TOOLTIP STUFF ----------------*/
+
+.tooltip{
+color: blue;
+background-color: black;
+
+}
+
+.output{
+display: none;
+position: absolute;
+border: 1px solid red;
+background-color: black;
+color:blue;
+padding: 5px;
+top: 100px;
+left: 50px;
+}
+
+  /*  HYPE ANIMATION IN PROGRESS */ 
+
+
+ 
+
